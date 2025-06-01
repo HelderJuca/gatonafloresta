@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Jogo do Gato na Floresta</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Jogo do Gato na Floresta</title>
 
-    <!-- Fontes -->
-    <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Phaser -->
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+  <!-- Phaser -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
 </head>
 <body>
-    <h1>Jogo do Gato na Floresta</h1>
+  <h1>Jogo do Gato na Floresta</h1>
 
-    <div id="container">
-        <div id="jogo"></div>
+  <div id="container">
+    <div id="jogo"></div>
 
-        <aside id="sidebar">
-            <div class="section">
-                <p><strong>Distância:</strong> <span id="distance">0 m</span></p>
-                <p><strong>Bônus:</strong> <span id="bonus">0 pts</span></p>
-                <p><strong>Total:</strong> <span id="total">0 pts</span></p>
-            </div>
-            <div class="section">
-                <h2>TOP 8</h2>
-                <ol id="top8">
-                    <li>—</li>
-                    <li>—</li>
-                    <li>—</li>
-                    <li>—</li>
-                    <li>—</li>
-                    <li>—</li>
-                    <li>—</li>
-                    <li>—</li>
-                </ol>
-            </div>
-        </aside>
-    </div>
+    <aside id="sidebar">
+      <div class="section">
+        <p><strong>Distância:</strong> <span id="distance">0 m</span></p>
+        <p><strong>Bônus:</strong> <span id="bonus">0 pts</span></p>
+        <p><strong>Total:</strong> <span id="total">0 pts</span></p>
+      </div>
+      <div class="section">
+        <h2>TOP 8</h2>
+        <ol id="top8">
+          <li>—</li>
+          <li>—</li>
+          <li>—</li>
+          <li>—</li>
+          <li>—</li>
+          <li>—</li>
+          <li>—</li>
+          <li>—</li>
+        </ol>
+      </div>
+    </aside>
+  </div>
 
-    <!-- Botão PULAR -->
-    <button id="botao-pulo">PULAR 🐾</button>
+  <!-- Botão PULO -->
+  <button id="botao-pulo">PULAR 🐾</button>
 
-    <!-- Botão INICIAR JOGO -->
-    <button id="iniciar-jogo">INICIAR JOGO</button>
+  <!-- Botão INICIAR -->
+  <button id="iniciar-jogo">INICIAR JOGO</button>
 
-    <script src="game.js"></script>
+  <!-- Input nome -->
+  <input id="entrada-nome" type="text" maxlength="12" placeholder="Digite seu nome" class="oculto" autocomplete="off" />
+
+  <!-- Alerta modo paisagem -->
+  <div id="orientacao-paisagem" class="oculto">
+    <p>Por favor, vire o celular para <strong>modo paisagem</strong> 📱➡️</p>
+  </div>
+
+  <!-- JS do jogo -->
+  <script src="game.js"></script>
 </body>
 </html>
