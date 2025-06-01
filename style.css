@@ -1,0 +1,150 @@
+/* ==============================
+   Corpo e tipografia geral
+   ============================== */
+body {
+    background: linear-gradient(to top, #cbe9c2 70%, #b3e1a1 100%);
+    font-family: Arial, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* ===========================
+   Título principal (<h1>)
+   =========================== */
+h1 {
+    color: #235326;
+    margin-top: 30px;
+    font-family: 'Kablammo', cursive, sans-serif;
+    font-size: 3em;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px #b3e1a1;
+}
+
+/* ==================================
+   Container flex: canvas + sidebar
+   ================================== */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ===========================
+   Canvas do Phaser (800×400)
+   =========================== */
+#jogo {
+    width: 800px;
+    height: 400px;
+    background: #e2ffd9;
+    border: 5px solid #235326;
+    border-radius: 20px;
+    box-shadow: 0 0 40px #6bbf59;
+    position: relative;
+}
+
+/* ==============================
+   Sidebar: HUD e placar (150×400)
+   ============================== */
+#sidebar {
+    font-family: 'Fredoka', sans-serif;
+    width: 220px;
+    height: 400px;
+    background: #ffffffcc;
+    border: 3px solid #235326;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #6bbf59;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#sidebar .section {
+    margin-bottom: 20px;
+}
+
+#sidebar h2 {
+    font-size: 1.2em;
+    margin: 0 0 8px 0;
+    color: #235326;
+    text-decoration: underline;
+}
+
+#sidebar p {
+    margin: 4px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+#sidebar p strong {
+    color: #235326;
+}
+
+#sidebar ol {
+    padding-left: 16px;
+    margin: 0;
+    list-style: decimal inside;
+}
+
+#sidebar ol li {
+    font-size: 0.95em;
+    margin: 4px 0;
+    color: #333;
+}
+
+
+/* ===========================
+   BOTÃO FLUTUANTE: mouse ou toque
+   =========================== */
+#botao-pulo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #235326;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 25px;
+    font-size: 1.2em;
+    font-family: 'Fredoka', sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    transition: transform 0.1s;
+}
+
+#botao-pulo:active {
+    transform: scale(0.95);
+}
+
+/* ===========================
+   Responsividade para celular
+   =========================== */
+@media (max-width: 980px) {
+    #container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #sidebar {
+        margin-top: 20px;
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    #jogo {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+    }
+
+    #botao-pulo {
+        display: block;
+    }
+}
