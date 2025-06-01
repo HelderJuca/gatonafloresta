@@ -172,15 +172,15 @@ function gameOver() {
   // Mensagem personalizada:
   let mensagemFinal = '';
   if (colocacao === 1) {
-    mensagemFinal = `🥇🥇🥇 Uhuuu!!! É OUROOOO!!! ${total} pts. Medalha de OURO! 🥇🥇🥇`;
+    mensagemFinal = `🥇🥇🥇 Uhuuu!!! É OUROOOO!!!\n${total} pts. Medalha de OURO! 🥇🥇🥇`;
   } else if (colocacao === 2) {
-    mensagemFinal = `Uau! Parabéns medalhista! ${total} pts. Medalha de PRATA!`;
+    mensagemFinal = `Uau! Parabéns medalhista!/n${total} pts. 🥈Medalha de PRATA!🥈`;
   } else if (colocacao === 3) {
-    mensagemFinal = `Uau! Parabéns medalhista! ${total} pts. Medalha de BRONZE!`;
+    mensagemFinal = `Uau! Parabéns medalhista!\n${total} pts. 🥉Medalha de BRONZE!🥉`;
   } else if (colocacao >= 4 && colocacao <= 8) {
-    mensagemFinal = `Parabéns! ${total} pts. ${colocacao}º lugar!`;
+    mensagemFinal = `Parabéns!\n${total} pts. ${colocacao}º lugar!`;
   } else {
-    mensagemFinal = `${total} pts. Não entrou no ranking.`;
+    mensagemFinal = `${total} pts.\nNão entrou no ranking.`;
   }
 
   textoGameOver.setText(mensagemFinal);
@@ -191,7 +191,7 @@ function gameOver() {
     const medalhas = ['🥇', '🥈', '🥉'];
     const emoji = medalhas[colocacao - 1];
     const medalhaText = game.scene.scenes[0].add.text(400, 260, emoji, {
-      font: '64px Arial',
+      font: '64px Fredoka',
       color: '#f90'
     }).setOrigin(0.5).setScale(0).setAlpha(0.8);
 
@@ -202,7 +202,7 @@ function gameOver() {
       duration: 500,
       ease: 'Bounce',
       yoyo: true,
-      hold: 1000,
+      hold: 10000,
       onComplete: () => medalhaText.destroy()
     });
   }
